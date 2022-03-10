@@ -1,0 +1,46 @@
+<header class="navbar is-link">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item">
+                <h1 class="title pt-2">PETRU&Tcedil;</h1>
+            </a>
+            <span class="navbar-burger " data-target="navbarMenuHeroC" (click)="onBurgerClick()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </div>
+        <div id=" navbarMenuHeroC" class="navbar-menu" [ngClass]="isActive ? 'is-active' : '' ">
+            <div class="navbar-end">
+                <!-- <a class="navbar-item is-active">
+                    Home
+                </a>
+                <a class="navbar-item">
+                    Contact
+                </a> -->
+                <span class="navbar-item">
+                    <a class="button is-link is-inverted" href="assets/CV Musat_Petrut V3.pdf" download>
+                        <span class="icon">
+                            <fa-icon [icon]="faDownload"></fa-icon>
+                            <i class="fab fa-github"></i>
+                        </span>
+                        <span>CV</span>
+                    </a>
+                </span>
+
+                <span class=" navbar-item">
+                    <a class="button is-white" href="https://www.linkedin.com/in/petrut-musat-3b816813a"
+                        target="_blank">
+                        <img src="assets/LI-Logo.png" alt="">
+                    </a>
+                </span>
+
+                <span class=" navbar-item">
+                    <a class="button is-dark" href="https://github.com/gpetrut86/" target="_blank">
+                        <img src="assets/GitHub_Logo_White.png" alt="">
+                    </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</header>

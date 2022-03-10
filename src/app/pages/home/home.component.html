@@ -1,0 +1,33 @@
+<section class="hero is-link is-fullheight">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+        <app-nav-bar></app-nav-bar>
+    </div>
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+        <div class="container">
+            <app-about (onProjects)="setIsProjects()" *ngIf="isAbout()"></app-about>
+            <app-programmer *ngIf="isProgrammer()"></app-programmer>
+            <app-artist *ngIf="isArtist()"></app-artist>
+            <app-projects *ngIf="isProjects()"></app-projects>
+            <app-portofolio *ngIf="isPortofolio()"></app-portofolio>
+        </div>
+    </div>
+
+    <!-- Hero footer: will stick at the bottom -->
+    <div class="hero-foot footerFix">
+        <nav class="tabs is-boxed is-fullwidth ">
+            <div class="container">
+                <ul>
+                    <li [ngClass]="{'is-active': isAbout()}"><a (click)="setIsAbout()">About me</a></li>
+                    <li [ngClass]="{'is-active': isProgrammer()}"><a (click)="setIsProgrammer()">IT Skills</a>
+                    </li>
+                    <li [ngClass]="{'is-active': isProjects()}"><a (click)="setIsProjects()">Projects</a></li>
+                    <li [ngClass]="{'is-active': isArtist()}"><a (click)="setIsArtist()">Artist Skills</a></li>
+                    <li [ngClass]="{'is-active': isPortofolio()}"><a (click)="setIsPortofolio()">Art Portofolio</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</section>

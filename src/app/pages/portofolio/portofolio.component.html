@@ -1,0 +1,35 @@
+<div class="content is-large">
+    <h1 class="has-text-white">Art Portofolio</h1>
+    <hr>
+    <p>Cateva dintre lucrarile mele realizate pentru clienti</p>
+
+</div>
+
+<div class="columns is-multiline">
+    <div class="column is-one-quarter-desktop is-half-tablet" *ngFor="let imagelink of images">
+        <div class="card">
+            <div class="card-image">
+
+                <a (click)="activeModal(image)">
+                    <figure class="image ">
+                        <img #image src="{{imagelink}}" alt="" onContextMenu="return false;">
+                    </figure>
+                </a>
+
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+<div class="modal" [ngClass]="{'is-active': isActive} " (click)="closeModal()">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <p class="image">
+            <img [src]="imagePath" alt="" onContextMenu="return false;">
+        </p>
+    </div>
+    <button (click)="closeModal()" class="modal-close is-large" aria-label="close"></button>
+</div>

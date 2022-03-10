@@ -1,0 +1,76 @@
+<div class="has-text-centered">
+    <div class="columns is-desktop is-justify-content-center ">
+
+
+        <div class="column leftC">
+            <div *ngIf="isContact">
+                <h1 class="is-size-2 has-text-warning">Contact</h1>
+                <p class="is-size-5">
+                    <fa-icon [icon]="faEnvelope"></fa-icon> gpetrut86@gmail.com
+                </p>
+                <p class="is-size-5">
+                    <fa-icon [icon]="faMobile"></fa-icon> 0723186410
+                </p>
+
+                <div class="is-inline">
+                    <a class=" button is-dark  " href="https://www.linkedin.com/in/petrut-musat-3b816813a"
+                        target="_blank">
+                        <img class="button-img" src="assets/GitHub_Logo_White.png" alt="">
+                    </a>
+                </div>
+
+
+                <div class="ml-2 is-inline">
+                    <a class=" button is-white  " href="https://www.linkedin.com/in/petrut-musat-3b816813a"
+                        target="_blank">
+                        <img class="button-img" src="assets/LI-Logo.png" alt="">
+                    </a>
+                </div>
+
+
+                <div class="is-block mt-4">
+                    <a class=" button is-warning is-outlined" (click)="setIsContact()">
+                        <span class="icon">
+                            <fa-icon [icon]="faHome"></fa-icon>
+                            <i class="fab fa-github"></i>
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div *ngIf="!isContact">
+                <h1 class="title is-size-3">-HELLO!</h1>
+                <h2 class="has-text-warning is-size-1">I AM PETRU&Tcedil;</h2>
+                <p class=" is-size-4">
+                    I am a programmer and a graphic designer
+                </p>
+                <a class="button is-link is-inverted" href="assets/CV Musat_Petrut V3.pdf" download>
+                    <span class="icon">
+                        <fa-icon [icon]="faDownload"></fa-icon>
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>CV</span>
+                </a>
+
+                <a class="ml-2 button is-warning is-outlined" (click)="setIsContact()">
+                    <span class="icon">
+                        <fa-icon [icon]="faContact"></fa-icon>
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Contact</span>
+                </a>
+
+                <a class="ml-2 button is-warning is-outlined" (click)="onProjectsClick()">
+                    <span class="icon">
+                        <fa-icon [icon]="faArrowCircleRight"></fa-icon>
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Projects</span>
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
